@@ -1,41 +1,49 @@
+
+
 "use client";
 
 import React, { useState } from 'react';
 import LeftSideNav from '../_components/LeftSideNav';
 import RighSideBox from '../_components/RighSideBox';
+import Header from '../_components/Header';
 
 const WaterIntake = () => {
 
-  const [count , setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   function handleClickPlus() {
-    setCount (count +1);
-    if (count === 7){
-      alert(" You COmpleted 8 Glasses of water")
+    setCount(count + 1);
+    if (count === 7) {
+      alert("You completed 8 glasses of water");
     }
   }
+
   function handleClickMinus() {
-    setCount (count -1);
+    setCount(count - 1);
   }
 
   return (
-    <div className='flex'>
-        <LeftSideNav/>
+    <div className='flex h-screen'>
+      <LeftSideNav />
+      <div className='flex-1'>
+        <Header />
+        <div className='flex p-4'>
+          <div className='flex-1'>
+            <div className='grid justify-items-stretch'>
+              <div className='justify-self-center mt-[5rem]'>
 
-        
-            <div className='h-[1px] w-full bg-black mt-14'> 
-                <div className='flex'>  <div>
-                  <button onClick={handleClickPlus} >+</button>
-                  {count}
-                  <button onClick={handleClickMinus} >-</button>
-                </div>
-                <RighSideBox/>   </div>
-                
-
-            
+             
+            <button onClick={handleClickPlus} className='m-2 p-2 bg-blue-500 text-white rounded'>+</button>
+            {count}
+            <button onClick={handleClickMinus} className='m-2 p-2 bg-blue-500 text-white rounded'>-</button>
+          </div> 
+          </div>
+            </div>
+          <RighSideBox />
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default WaterIntake;

@@ -1,9 +1,13 @@
-import React from 'react'
+
+
+import React from 'react';
 
 const RighSideBox = () => {
   return (
-    <div className='h-screen w-[1px] ml-auto pl-10 bg-slate-300'></div>
-  )
+    <div className='w-64 bg-gray-200 p-4'>
+      Right Side Box Content
+    </div>
+  );
 }
 
 export default RighSideBox;
