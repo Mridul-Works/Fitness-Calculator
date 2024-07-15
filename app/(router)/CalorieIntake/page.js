@@ -9,6 +9,7 @@ import RighSideBox from '../_components/RighSideBox';
 
 const CalorieIntake = () => {
     const [calories, setCalories] = useState('');
+    const [item, setItem] = useState('');
     const [protein, setProtein] = useState('');
     const [fats, setFats] = useState('');
     const [carbs, setCarbs] = useState('');
@@ -37,16 +38,24 @@ const CalorieIntake = () => {
         //     <LeftSideNav />
         //     {/* <div className='h-[1px] w-full bg-black mt-14 '></div> */}
            
-        <div className='flex h-screen'>
+        <div className='flex '>
         <LeftSideNav />
         <div className='flex-1'>
           <Header />
-          <div className='flex p-4'>
+          <div className='flex '>
             <div className='flex-1'>
 
             <div className='ml-[5rem] '>
                 <div className='font-bold text-[2rem] mb-[2rem] mt-10'>Calculating Daily Calories Intake</div>
                 <form onSubmit={addCalories}>
+                <ul>
+                    <label>Item</label>
+                    <input 
+                    className='border-[2px] ml-10  rounded-md pt-1 pb-1 mt-2 w-[8rem] border-black '
+                        value={item}
+                        onChange={handleInputChange(setItem)}
+                        type="text"
+                    /></ul>
                     <ul>
                     <label>Calories</label>
                     <input 
@@ -82,10 +91,10 @@ const CalorieIntake = () => {
                     /></ul>
                     <button type="submit" className='bg-orange-500 w-[12rem] h-10 rounded-md border-[1px] ml-10 mt-10 text-white'>Submit</button>
                 </form>
-                <div className='mt-10 '>
+                <div className='mt-5 '>
                     Total Calories: {totalCalories}
                 </div>
-                <div>
+                <div className='mb-3'>
                     <PieChartWithCenterLabel />
                     {/* <PieChart /> */}
                 </div>

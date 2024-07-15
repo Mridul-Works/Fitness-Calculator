@@ -8,7 +8,7 @@ const data = [
   { value: 10, label: 'Remaining' },
 ];
 
-const colors = ['	#FFBA68', '#E37E07']; // Define the colors here
+const colors = ['	#2f428f', '#88dcfe']; // Define the colors here
 
 const size = {
   width: 400,
@@ -31,7 +31,7 @@ function PieCenterLabel({ children }) {
   );
 }
 
-export default function PieChartWithCenterLabel() {
+export default function WaterPieChart() {
   return (
     <PieChart
       series={[{ data, innerRadius: 80 }]}
@@ -42,3 +42,4 @@ export default function PieChartWithCenterLabel() {
     </PieChart>
   );
 }
+
