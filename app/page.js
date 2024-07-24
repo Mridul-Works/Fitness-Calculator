@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <div style={{ position: 'absolute', right: '0', marginRight: '50px', marginTop: '20px' }}>
       <Link href="/Login">
-      <Button style={{ backgroundColor: '#3490dc', borderColor: '#3490dc',
+      <Button style={{ backgroundColor: ' rgb(59 130 246 )', borderColor: '#3490dc',
          color: '#ffffff',borderRadius: '34px', width: '100px', height: '40px' }}>
         Sign in
       </Button></Link>
@@ -68,7 +68,7 @@ export default function Home() {
       </span>
      
       {/* text for claories  */}
-      <div className="bg-blue-400 mt-10 pl-20 pr-20 pt-10 pb-10 
+      <div className="bg-blue-500 mt-10 pl-20 pr-20 pt-10 pb-10 
       text-white rounded-sm">
         <span className="text-xl font-bold">
       Understanding Caloric Needs of the Body
@@ -80,7 +80,7 @@ export default function Home() {
          maintaining health, supporting bodily functions, and managing weight.
       </div>
        <ReqCalculator/>
-       <div className="bg-blue-300 pl-36 pr-36 text-xs mt-16 text-white pt-10 pb-10">
+       <div className="bg-blue-500 pl-36 pr-36 text-xs mt-16 text-white pt-10 pb-10">
       <span className="text-xl font-bold ">
        Basal Metabolic Rate (BMR)</span>
        <br/>
